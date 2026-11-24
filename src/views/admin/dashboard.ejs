@@ -103,15 +103,18 @@
       datasets: [{
         label: 'Sales (₱)',
         data: trendData.map(d => d.total),
-        borderColor: '#2b6cb0',
-        backgroundColor: 'rgba(43, 108, 176, 0.15)',
+        borderColor: '#756346',
+        backgroundColor: 'rgba(117, 99, 70, 0.14)',
         tension: 0.3,
         fill: true,
       }],
     },
     options: {
       plugins: { legend: { display: false } },
-      scales: { y: { beginAtZero: true } },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: '#777363' } },
+        y: { beginAtZero: true, grid: { color: '#e5dfd1' }, ticks: { color: '#777363' } },
+      },
     },
   });
 </script>
